@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Instagram Розіграш</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  
 </head>
 <body>
   <h2>Розіграш по коментарям Instagram</h2>
@@ -14,12 +15,15 @@
   <input type="file" id="fileInput" accept=".xls,.xlsx" />
 
   <label>Кількість переможців:</label>
-  <input type="number" id="winnerCount" min="1" value="1" />
+<input type="number" id="winnerCount" min="1" value="1" />
 
-  <button onclick="pickWinners()">Обрати переможців</button>
+<button onclick="pickSingleWinner()" style="background-color: #27ae60;">Обрати одного переможця</button>
+<button onclick="saveToFile()">Зберегти результат</button>
 
-  <div id="winners"></div>
+<div id="winners"></div>
+
   <script src="script.js"></script>
+
 
 </body>
 </html>

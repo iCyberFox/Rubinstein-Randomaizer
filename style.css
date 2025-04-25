@@ -1,4 +1,4 @@
-﻿body {
+﻿    body {
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9f9;
       padding: 40px;
@@ -24,7 +24,7 @@
       box-sizing: border-box;
     }
     button {
-      margin-top: 25px;
+      margin-top: 20px;
       padding: 12px;
       width: 100%;
       background: #007bff;
@@ -38,9 +38,12 @@
     button:hover {
       background: #005dc1;
     }
+    #pickOne {
+      background: #27ae60;
+    }
     #winners {
-      margin-top: 30px;
-      padding: 20px;
+      margin-top: 5px;
+      padding: 5px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);

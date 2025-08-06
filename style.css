@@ -1,0 +1,61 @@
+﻿body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      padding: 15px;
+      max-width: 600px;
+      margin: auto;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 20px;
+      display: block;
+    }
+    input[type="file"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button:hover {
+      background: #005dc1;
+    }
+    #pickOne {
+      background: #27ae60;
+    }
+    #winners {
+      margin-top: 5px;
+      padding: 5px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    ol {
+      padding-left: 20px;
+    }
+    #animationBox {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 15px;
+      color: #007bff;
+      min-height: 40px;
+    }

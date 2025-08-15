@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Розіграш</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <h2>Розіграш по коментарям YouTube</h2>
+
+  <label>Завантаж файл (.xls або .xlsx):</label>
+  <input type="file" id="fileInput" accept=".xls,.xlsx" />
+
+  <label>Кількість переможців:</label>
+  <input type="number" id="winnerCount" min="1" value="1" />
+
+  <button id="pickOne">Обрати одного переможця</button>
+  <div id="loadingIndicator" class="loading">Завантаження аватарок... Будь ласка, зачекайте</div>
+  <button id="saveBtn">Зберегти результат</button>
+
+  <div id="winners">
+    <h3 style="margin:0 0 8px">Переможці:</h3>
+    <ol id="winnersList"></ol>
+  </div>
+
+  <!-- ===== Модальне вікно ===== -->
+  <div id="winnerModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <span class="close" id="modalClose" aria-label="Закрити">&times;</span>
+
+      <!-- Екран «прокрутки» -->
+      <div id="rollScreen" class="rolling-wrap">
+        <img id="rollAvatar" class="avatar" alt="Аватар учасника" />
+        <div id="rollName" class="rolling-name"></div>
+      </div>
+
+      <!-- Екран фінального переможця -->
+      <div id="finalScreen" class="hidden" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+        <img id="winnerAvatar" class="avatar" alt="Аватар переможця">
+        <a id="winnerLink" class="name" href="#" target="_blank" rel="noopener noreferrer"></a>
+        <div id="winnerMeta" class="meta"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿    :root{
+      --primary:#007bff;
+      --primary-hover:#005dc1;
+      --accent:#27ae60;
+      --text:#2c3e50;
+      --muted:#8e9aa6;
+      --card:#fff;
+      --bg:#f9f9f9;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:40px;
+      margin:0 auto;
+      max-width:600px;
+    }
+    h2{ text-align:center; margin:0 0 24px }
+    label{ font-weight:600; margin-top:16px; display:block }
+    input[type="file"], input[type="number"]{
+      width:100%; padding:10px; margin-top:8px;
+      border:1px solid #d4d8dd; border-radius:8px; background:#fff
+    }
+    button{
+      width:100%; padding:12px; margin-top:16px;
+      background:var(--primary); color:#fff; border:0; border-radius:8px;
+      font-size:16px; cursor:pointer; transition:background .2s ease
+    }
+    button:hover{ background:var(--primary-hover) }
+    #pickOne{ background:var(--accent) }
+    #winners{
+      margin-top:10px; padding:16px; background:var(--card);
+      border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,.05)
+    }
+    ol{ padding-left:20px; margin:8px 0 0 }
+
+    /* ===== Модальне вікно (компактне) ===== */
+    .modal{
+      display:none; position:fixed; inset:0; z-index:1000;
+      background:rgba(0,0,0,.5)
+    }
+    .modal-content{
+      width:min(92vw, 320px);
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background:#fff; border-radius:14px; padding:18px 18px 20px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.2)
+    }
+    .modal .close{
+      position:absolute; top:6px; right:10px; font-size:22px;
+      cursor:pointer; color:#555; user-select:none
+    }
+    .avatar{
+      width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:10px;
+      background:#eee; display:block
+    }
+    .name{
+      font-size:18px; font-weight:700; color:#111; text-decoration:none; text-align:center
+    }
+    .meta{ margin-top:4px; font-size:13px; color:var(--muted) }
+
+    /* Контент під час прокрутки */
+    .rolling-wrap{
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      min-height:140px;
+    }
+    .rolling-name{
+      margin-top:8px; font-weight:700; font-size:18px; color:#111; letter-spacing:.2px;
+      text-align:center;
+      min-height:24px;
+    }
+    .hidden{ display:none !important }
+    .loading{ display:none; margin-top:10px; color:var(--muted) }
